@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Osamu HASEGAWA">
+
+    <meta name="keywords" content="JavaScript, janken">
+
+    <title>じゃんけん勝負</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <audio controls loop>
+            <source src="./bgm/natsuyasuminotanken.mp3">
+        </audio>
+    </div>
+
+    
+    <div id="main">
+        <div id="container">
+            <h1>じゃんけん...</h1>
+            <p class="text">試合数：
+                <span id="gameCount">0</span>
+            </p>
+
+            <div class="btn">
+                <button id="rock" value="0">グー</button>
+                <button id="scissors" value="1">チョキ</button>
+                <button id="paper" value="2">パー</button>
+            </div>
+
+            <div id="battle">
+                <p id="myHand">自分の出した手：まだ出していません</p>
+                <p id="enemyHand">相手の出した手：まだ出していません</p>
+                <h2 id="result"></h2>
+                <div id="announce"></div>
+            </div>
+
+            <div id="resultTable">
+                <dl>
+                    <dt class="text">勝ち数</dt>
+                    <dt class="text">負け数</dt>
+                    <dt class="text">勝率</dt>
+                </dl>
+                <dl>
+                    <dd id="winCount">ー</dd>
+                    <dd id="loseCount">ー</dd>
+                    <dd id="winRate">ー</dd>
+                </dl>
+            </div>
+
+                <div id="reset"></div>
+
+        </div>
+    </div>
+
+    <script src="./js/janken2.js"></script>
+    <link rel="stylesheet" href="./css/janken2.css">
+
+</body>
+</html>
